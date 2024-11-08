@@ -1,6 +1,28 @@
-@ClientixAPI_HostAddress = http://localhost:5198
+@ClientixAPI_HostAddress = http://localhost:7276
 
-GET {{ClientixAPI_HostAddress}}/weatherforecast/
+### Добавить клиента
+POST http://localhost:7276/api/client
+Content-Type: application/json
+
+{
+    "inn": "1234567890",
+    "name": "Компания А",
+    "type": "LegalEntity"
+}
+
+### Получить клиента по ID
+GET http://localhost:7276/api/client/1
 Accept: application/json
 
-###
+### Обновить клиента
+PUT http://localhost:7276/api/client/1
+Content-Type: application/json
+
+{
+    "inn": "1234567890",
+    "name": "Обновленная Компания А",
+    "type": "LegalEntity"
+}
+
+### Удалить клиента
+DELETE http://localhost:7276/api/client/1
