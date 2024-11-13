@@ -6,7 +6,7 @@ namespace ClientixAPI.Models
     public class Founder
     {
         [Key]
-        public Guid? Id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "ИНН учредителя обязателен")]
         [RegularExpression(@"^[0-9]{10}$|^[0-9]{12}$", ErrorMessage = "ИНН должен содержать 10 или 12 цифр")]
@@ -24,7 +24,7 @@ namespace ClientixAPI.Models
 
         // Внешний ключ для связи с клиентом
         [Required]
-        public Guid? ClientId { get; set; }
+        public int ClientId { get; set; }
 
         [JsonIgnore]
         public Client? Client { get; set; }

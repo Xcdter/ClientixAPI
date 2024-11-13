@@ -7,7 +7,7 @@ namespace ClientixAPI.Models
     public class Client
     {
         [Key]
-        public Guid? Id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "ИНН обязателен")]
         [RegularExpression(@"^[0-9]{10}$|^[0-9]{12}$", ErrorMessage = "ИНН должен содержать 10 или 12 цифр")]
