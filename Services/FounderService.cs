@@ -31,6 +31,9 @@ namespace ClientixAPI.Services
         {
             founder.DateAdded = DateTime.UtcNow;
             founder.DateUpdated = DateTime.UtcNow;
+
+            founder.Id = Guid.NewGuid();
+
             _context.Founders.Add(founder);
             await _context.SaveChangesAsync();
             return founder;

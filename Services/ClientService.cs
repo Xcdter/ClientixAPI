@@ -35,9 +35,12 @@ namespace ClientixAPI.Services
             {
                 foreach (var founder in client.Founders)
                 {
-                    //founder.Client = client;
+                    founder.Client = client;
                 }
             }
+
+            client.Id = Guid.NewGuid();
+
             _context.Clients.Add(client);
             await _context.SaveChangesAsync();
             return client;
