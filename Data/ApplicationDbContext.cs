@@ -17,7 +17,6 @@ namespace ClientixAPI.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Дополнительные настройки моделей, если нужно
             modelBuilder.Entity<Client>()
                 .HasMany(c => c.Founders)
                 .WithOne(f => f.Client)
