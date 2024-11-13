@@ -16,7 +16,7 @@ namespace ClientixAPI.Controllers
             _clientService = clientService;
         }
 
-        // Получить все клиенты
+        // Получить всех клиентов
         [HttpGet]
         public async Task<IActionResult> GetAllClients()
         {
