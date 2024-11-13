@@ -39,8 +39,6 @@ namespace ClientixAPI.Services
                 }
             }
 
-            client.Id = Guid.NewGuid();
-
             _context.Clients.Add(client);
             await _context.SaveChangesAsync();
             return client;
