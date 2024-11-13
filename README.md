@@ -30,7 +30,12 @@ dotnet restore
 ```bash
 dotnet run
 ```
+API будет доступно по адрессу
+```bash
+HTTP: http://localhost:5198
 
+HTTPS: https://localhost:7276
+```
 
 ## Использование API (Тестирование через OpenAPI ( Swagger ))
 
